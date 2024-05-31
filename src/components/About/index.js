@@ -32,19 +32,14 @@ const About = () => {
               idx={15}
             />
           </h1>
-          <p>
-            I'm a very ambitious front-end developer looking for a role in an
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
+          <p className='about'>
+          I am a B.Tech graduate in Computer Science Engineering from Guru Gobind Singh Indraprastha University, with a strong foundation in programming and software development. I have gained hands-on experience through internships and projects, focusing on web development, data analysis, and machine learning. I am proficient in multiple programming languages and frameworks, and I have a passion for solving complex problems and optimizing applications.
           </p>
           <p align="LEFT">
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+          Throughout my academic and professional journey, I have demonstrated leadership by mentoring teams and successfully executing projects that led to significant improvements in productivity and performance. My technical skills are complemented by my ability to quickly adapt to new technologies and methodologies, making me a versatile and valuable team player.
           </p>
           <p>
-            If I need to define myself in one sentence that would be a family
-            person, father of a beautiful daughter, a sports fanatic,
-            photography enthusiast, and tech-obsessed!!!
+          I am seeking opportunities that allow me to leverage my technical expertise, problem-solving skills, and leadership abilities to contribute to innovative projects and drive organizational success.
           </p>
         </div>
 
