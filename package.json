@@ -16,6 +16,8 @@
     "loaders.css": "^0.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-feather": "^2.0.10",
+    "react-icons": "^5.2.1",
     "react-leaflet": "^4.2.1",
     "react-loaders": "^3.0.1",
     "react-router-dom": "^6.23.0",

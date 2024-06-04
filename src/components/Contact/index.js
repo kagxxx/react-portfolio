@@ -84,16 +84,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <div className="info-map">
-          {/* KUNAL, */}
-          <br />
-          {/* INDIA, */}
-          <br />
-          {/* Branka RadiČevića 19, 22000 <br />
-          Sremska Mitrovica <br /> */}
-          <br />
-          {/* <span>kunnalgakhar1728@gmail.com</span> */}
-        </div>
+        
         {/* <div className="map-wrap">
           <MapContainer center={[44.96366, 19.61045]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -102,6 +93,7 @@ const Contact = () => {
             </Marker>
           </MapContainer>
         </div> */}
+        <img className='contact-image' src="https://i.redd.it/ft1k9cmdr4wa1.jpg" />
       </div>
       <Loader type="pacman" />
     </>
