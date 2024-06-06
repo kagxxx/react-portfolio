@@ -5,7 +5,8 @@ import Contact from './components/Contact'
 import Layout from './components/Layout'
 import Portfolio from './components/Portfolio'
 import Dashboard from './components/Dashboard'
-import Carousel from './components/Carousel'
+import Banner from './components/Banner'
+
 
 import './App.scss'
 
@@ -16,12 +17,13 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Banner />} />
           <Route path="about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/carousel" element={<Carousel />} />
+          <Route path="/banner" element={<Banner />} />
+          
         </Route>
       </Routes>
     </>
