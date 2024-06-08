@@ -7,11 +7,16 @@ import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import ContactImg from '../../assets/images/contact-img.svg'
 import 'animate.css'
-import TrackVisibility from 'react-on-screen'
+
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const form = useRef()
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
 
   //   useEffect(() => {
   //     return setTimeout(() => {
@@ -22,19 +27,20 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault()
 
-    const serviceId = 'service_atmcjiu'
-    const templateId = 'template_jvbqpy9'
-    const publicKey = 'u1IJvHByaYgXdk8C4'
+    // const serviceId = 'service_atmcjiu'
+    // const templateId = 'template_jvbqpy9'
+    // const publicKey = 'u1IJvHByaYgXdk8C4'
 
     emailjs
-      .sendForm(serviceId, templateId, form.current, { publicKey: publicKey })
+      .sendForm('service_atmcjiu', 'template_v2g9wyf', form.current, 'LYUhAuOIetYQUiDKI')
       .then(
         () => {
           alert('Message successfully sent!')
           window.location.reload(false)
         },
-        () => {
+        (error) => {
           alert('Failed to send the message, please try again')
+          console.log(error);
         }
       )
   }
@@ -59,14 +65,17 @@ const Contact = () => {
             <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input placeholder="Name" type="text" name="name" required />
+                  <input placeholder="Name" type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
                 </li>
                 <li className="half">
                   <input
                     placeholder="Email"
                     type="email"
                     name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
+
                   />
                 </li>
                 <li>
@@ -74,6 +83,8 @@ const Contact = () => {
                     placeholder="Subject"
                     type="text"
                     name="subject"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
                     required
                   />
                 </li>
@@ -81,6 +92,8 @@ const Contact = () => {
                   <textarea
                     placeholder="Message"
                     name="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     required
                   ></textarea>
                 </li>
