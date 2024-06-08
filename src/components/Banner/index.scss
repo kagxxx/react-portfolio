@@ -24,6 +24,8 @@ h6 {
 .row {
     
   padding: 80px 80px;
+  position: relative;
+  top: 150px;
 }
 
 .intro{
@@ -95,6 +97,7 @@ h6 {
   display: ruby-text-container;
   position: relative;
   left: 150%;
+  top: 150px;
 }
 .banner button:hover svg {
   margin-left: 25px;
@@ -127,6 +130,8 @@ h6 {
       }
     .col1{
         display: block;
+        position:relative;
+        bottom: 200px;
     }
     .col2 {
         display: contents;

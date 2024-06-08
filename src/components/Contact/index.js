@@ -5,22 +5,29 @@ import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
+import ContactImg from '../../assets/images/contact-img.svg'
+import 'animate.css'
+import TrackVisibility from 'react-on-screen'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const form = useRef()
 
-//   useEffect(() => {
-//     return setTimeout(() => {
-//       setLetterClass('text-animate-hover')
-//     }, 3000)
-//   }, [])
+  //   useEffect(() => {
+  //     return setTimeout(() => {
+  //       setLetterClass('text-animate-hover')
+  //     }, 3000)
+  //   }, [])
 
   const sendEmail = (e) => {
     e.preventDefault()
 
+    const serviceId = 'service_atmcjiu'
+    const templateId = 'template_jvbqpy9'
+    const publicKey = 'u1IJvHByaYgXdk8C4'
+
     emailjs
-      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
+      .sendForm(serviceId, templateId, form.current, { publicKey: publicKey })
       .then(
         () => {
           alert('Message successfully sent!')
@@ -84,7 +91,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        
+
         {/* <div className="map-wrap">
           <MapContainer center={[44.96366, 19.61045]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -93,7 +100,8 @@ const Contact = () => {
             </Marker>
           </MapContainer>
         </div> */}
-        <img className='contact-image' src="https://i.redd.it/ft1k9cmdr4wa1.jpg" />
+
+        <img className="contact-image" src={ContactImg} />
       </div>
       <Loader type="pacman" />
     </>

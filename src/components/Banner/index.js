@@ -6,6 +6,8 @@ import { ArrowRightCircle } from 'react-bootstrap-icons'
 import headerImg from '../../assets/images/header-img.svg'
 import TrackVisibility from 'react-on-screen'
 import Loader from 'react-loaders'
+import { useNavigate } from 'react-router-dom';
+import 'animate.css'
 
 
 const Banner = () => {
@@ -26,7 +28,9 @@ const Banner = () => {
       clearInterval(ticker)
     }
   }, [text])
-
+    
+  const navigate = useNavigate();
+ 
   const tick = () => {
     let i = loopNum % toRotate.length
     let fullText = toRotate[i]
@@ -63,7 +67,7 @@ const Banner = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? 'animate__animated animate__fadeIn' : ''
+                    isVisible ? 'animate__animated animate__bounce' : ''
                   }
                 >
                   <span className="tagline">Welcome to my portfolio</span>
@@ -73,19 +77,9 @@ const Banner = () => {
                     <span className="wrap">{text}</span>
                   </h1>
                   <p>
-                    Iron Man is a superhero appearing in American comic books
-                    published by Marvel Comics. Co-created by writer and editor
-                    Stan Lee, developed by scripter Larry Lieber, and designed
-                    by artists Don Heck and Jack Kirby, the character first
-                    appeared in Tales of Suspense #39 in 1962, and received his
-                    own title with Iron Man #1 in 1968. Shortly after his
-                    creation, Iron Man became a founding member of the superhero
-                    team, the Avengers, with Thor, Ant-Man, the Wasp, and the
-                    Hulk. Iron Man stories, individually and with the Avengers,
-                    have been published consistently since the character's
-                    creation.{' '}
+                  Front End Developer / Python Expert /C++ Expert / JavaScript Expert .{' '}
                   </p>
-                  <button onClick={() => console.log('connect')}>
+                  <button onClick={() => navigate('/contact')}>
                     Contact Me <ArrowRightCircle size={25} />
                   </button>
                 </div>
