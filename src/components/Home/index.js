@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
-import Logo from './Logo'
 import './index.scss'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
 import { useNavigate } from 'react-router-dom';
+import headerImg from '../../assets/images/header-img.svg'
+
 
 
 const Home = () => {
@@ -109,7 +109,14 @@ const Home = () => {
             Contact Me <ArrowRightCircle size={25} />
           </button>
         </div>
-        <Logo />
+        {/* <Logo /> */}
+        
+      <img
+        className="solid-logo"
+        src={headerImg}
+        alt="JavaScript,  Developer"
+      />
+    
       </div>
 
       <Loader type="pacman" />
