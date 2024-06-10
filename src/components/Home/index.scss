@@ -17,7 +17,7 @@
       font-weight: 400;
   
       &:before {
-        content: '<h1>';
+        content: '';
         font-family: 'La Belle Aurore', cursive;
         color: #ffd700;
         font-size: 18px;
@@ -28,7 +28,7 @@
       }
   
       &:after {
-        content: '<h1/>';
+        content: '';
         font-family: 'La Belle Aurore', cursive;
         color: #ffd700;
         font-size: 18px;
@@ -58,26 +58,26 @@
       letter-spacing: 3px;
       animation: fadeIn 1s 1.8s backwards;
     }
-  
-    .flat-button {
-      color: #ffd700;
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 4px;
-      font-family: sans-serif;
-      text-decoration: none;
-      padding: 10px 18px;
-      border: 1px solid #ffd700;
-      margin-top: 25px;
-      float: left;
-      animation: fadeInAnimation 1s 1.8s backwards;
-      white-space: nowrap;
-  
-      &:hover {
-        background: #ffd700;
-        color: #333;
-      }
-    }
+
+  }
+  .home-page button {
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 60px;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+  }
+  .home-page button svg {
+    font-size: 25px;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+    line-height: 1;
+  }
+  .home-page button:hover svg {
+    margin-left: 25px;
   }
   
   
@@ -107,9 +107,9 @@
   
     .logo-container {
       position: relative;
-      width: 100px;
+      width: 300px;
       height: auto;
-      top: 50px;
+      top: 100px;
       right: 0;
       box-sizing: border-box;
       margin: auto;
