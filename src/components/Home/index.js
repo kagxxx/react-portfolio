@@ -104,7 +104,7 @@ const Home = () => {
             <br />
             <span className="wrap">{text}</span>
           </h1>
-          <h2>Front End Developer / JavaScript Expert / Youtuber</h2>
+          <h2>Front End & Back End Developer / JavaScript Expert / Python Expert / C++ Expert</h2>
           <button onClick={() => navigate('/contact')}>
             Contact Me <ArrowRightCircle size={25} />
           </button>
